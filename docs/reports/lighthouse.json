@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-21",
+  "mode": "Local production build with ALLOW_INDEXING=true on separate loopback port; main preview remains noindex",
+  "lighthouseVersion": "13.5.0",
+  "fetchTime": "2026-10-21T17:34:30.349Z",
+  "categories": {
+    "performance": {
+      "score": 98,
+      "title": "Performance"
+    },
+    "accessibility": {
+      "score": 100,
+      "title": "Accessibility"
+    },
+    "best-practices": {
+      "score": 100,
+      "title": "Best Practices"
+    },
+    "seo": {
+      "score": 100,
+      "title": "SEO"
+    }
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "value": 769.0101999999999,
+      "unit": "millisecond"
+    },
+    "largest-contentful-paint": {
+      "value": 2016.0102000000002,
+      "unit": "millisecond"
+    },
+    "total-blocking-time": {
+      "value": 106,
+      "unit": "millisecond"
+    },
+    "cumulative-layout-shift": {
+      "value": 0.05372347703634207,
+      "unit": "unitless"
+    },
+    "speed-index": {
+      "value": 769.0101999999999,
+      "unit": "millisecond"
+    }
+  },
+  "warnings": []
+}

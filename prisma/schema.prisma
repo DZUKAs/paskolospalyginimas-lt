@@ -1,0 +1,89 @@
+generator client {
+ provider = "prisma-client-js"
+}
+datasource db {
+ provider = "sqlite"
+ url = env("DATABASE_URL")
+}
+model Creditor {
+ id String @id @default(cuid())
+ slug String @unique
+ name String
+ tagline String
+ summary String
+ reviewHtml String
+ logo String?
+ applyUrl String?
+ sourceUrl String
+ sourceCapturedAt DateTime
+ verifiedAt DateTime?
+ amountMin Int?
+ amountMax Int?
+ termMin Int?
+ termMax Int?
+ apr Float?
+ annualRate Float?
+ monthlyFee Float?
+ originationPercent Float?
+ pricingVerified Boolean @default(false)
+ example String?
+ rating Float?
+ ratingBasis String?
+ firstFree Boolean?
+ fast Boolean?
+ payout247 Boolean?
+ firstTerms String?
+ speed String?
+ requirements String
+ documents String
+ suitableFor String
+ pros String
+ cons String
+ faq String
+ verificationNotes String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ articles Article[]
+}
+model Article {
+ id String @id @default(cuid())
+ slug String @unique
+ legacyPath String? @unique
+ title String
+ excerpt String
+ bodyHtml String
+ category String
+ status String @default("DRAFT")
+ publishedAt DateTime?
+ author String
+ image String?
+ imageAlt String?
+ seoTitle String?
+ seoDescription String?
+ ogImage String?
+ sourceUrl String?
+ creditorId String?
+ creditor Creditor? @relation(fields:[creditorId],references:[id],onDelete:SetNull)
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+model User {
+ id String @id @default(cuid())
+ email String @unique
+ passwordHash String
+ role String @default("EDITOR")
+ sessionVersion Int @default(0)
+ createdAt DateTime @default(now())
+}
+model LoginAttempt {
+ key String @id
+ count Int @default(0)
+ windowStart DateTime @default(now())
+}
+model AuditLog {
+ id String @id @default(cuid())
+ userId String
+ action String
+ target String
+ createdAt DateTime @default(now())
+}
