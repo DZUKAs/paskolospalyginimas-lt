@@ -87,3 +87,8 @@ model AuditLog {
  target String
  createdAt DateTime @default(now())
 }
+
+model SeedState {
+  key String @id
+  completedAt DateTime @default(now())
+}

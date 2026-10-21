@@ -1,4 +1,6 @@
 import { PrismaClient } from '@prisma/client';
+import { resolveDatabaseUrl } from '../scripts/database-url.mjs';
+process.env.DATABASE_URL = resolveDatabaseUrl();
 const db = new PrismaClient();
 const captured = new Date('2026-10-21T17:08:00Z');
 const creditors = [
@@ -134,7 +136,7 @@ const creditors = [
     documents: 'PATIKRINTI tapatybės ir pajamų patvirtinimui reikalingus dokumentus.',
   },
 ];
-async function main() {
+async function populate(db) {
   for (const c of creditors) {
     const { pros, cons, notes, ...fields } = c;
     await db.creditor.upsert({
@@ -228,5 +230,20 @@ async function main() {
         seoDescription: excerpt,
       },
     });
+}
+async function main() {
+  if (process.argv.includes('--once')) {
+    await db.$transaction(
+      async (tx) => {
+        const key = 'initial-site-content-v1';
+        if (await tx.seedState.findUnique({ where: { key } })) return;
+        await populate(tx);
+        await tx.seedState.create({ data: { key } });
+      },
+      { maxWait: 30000, timeout: 30000 },
+    );
+  } else {
+    await populate(db);
+  }
 }
 main().finally(() => db.$disconnect());

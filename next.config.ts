@@ -13,6 +13,18 @@ const posts = legacy
   }));
 const config: NextConfig = {
   poweredByHeader: false,
+  outputFileTracingIncludes: {
+    '/*': [
+      './scripts/database-url.mjs',
+      './scripts/ensure-db.mjs',
+      './scripts/prepare-runtime.mjs',
+      './prisma/seed.mjs',
+      './prisma/schema.prisma',
+      './prisma/migrations/**/*',
+      './node_modules/prisma/**/*',
+      './node_modules/@prisma/**/*',
+    ],
+  },
   htmlLimitedBots: /.*/,
   skipTrailingSlashRedirect: true,
   async redirects() {

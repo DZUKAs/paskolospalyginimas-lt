@@ -29,7 +29,7 @@ Naršyklėje naudokite vietinio serverio 3000 prievadą. Produkcijos patikrai: `
 | `NEXTAUTH_URL` | Tikslus aplikacijos origin, vietoje `http://localhost:3000`, produkcijoje tikras HTTPS adresas. |
 | `NEXTAUTH_SECRET` | Ilga atsitiktinė, slapta, stabili sesijos pasirašymo / šifravimo reikšmė. Niekada necommitinkite. |
 | `SITE_URL` | Viešasis canonical ir sitemap pagrindas, numatyta `https://paskolospalyginimas.lt`. |
-| `ALLOW_INDEXING` | `false` iki duomenų, politikų ir domeno patvirtinimo; `true` tik viešam paleidimui. Pakeitus perkurkite build (robots generuojamas build metu). |
+| `ALLOW_INDEXING` | `false` iki duomenų, politikų ir domeno patvirtinimo; `true` tik viešam paleidimui. Pakeitus aplinkos reikšmę perkraukite aplikaciją; robots generuojamas serveryje. |
 | `ADMIN_PASSWORD` | Tik vienkartinei CLI paskyros kūrimo komandai, ne bendram aplikacijos darbui. |
 
 Nereikia kreditorių API raktų, GitHub tokeno ar trečiųjų šalių analitikos prisijungimų. `.env` ir DB neįtraukti į Git. Diegimo aplinkoje reikšmes laikykite paslapčių valdymo sistemoje.
@@ -75,6 +75,10 @@ npm audit --omit=dev
 ```
 
 Playwright naudoja sisteminį `/usr/bin/chromium`; jei jo nėra, įdiekite Chromium arba pakeiskite `playwright.config.ts` į Playwright valdomą naršyklę. E2E paleidžia produkcinį serverį, jei 3000 prievade jo nėra. Naudojama **vietinė testinė DB**, niekada neleiskite testų prieš tikrą produkcinę DB: jie sukuria ir pašalina atsitiktinius testinius naudotojus bei turinį. Paleisti prieš lokaliai paruoštą seed. Automatinė prieinamumo patikra naudoja axe WCAG 2 A/AA ir 2.1 AA; ji nepakeičia pilno rankinio audito.
+
+## Hostinger Node.js
+
+[Hostinger nustatymai ir tuščios runtime DB pataisymas](docs/HOSTINGER.md). Serveris per Next.js instrumentation automatiškai paruošia migracijas ir pradinius duomenis; esami įrašai neperrašomi. Peržiūrai tai pašalina trūkstamų lentelių klaidą. Patvarus duomenų išsaugojimas tarp Hostinger leidimų turi būti patvirtintas atskirai.
 
 ## Diegimas į VPS
 
