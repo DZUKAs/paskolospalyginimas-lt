@@ -18,6 +18,7 @@ const config: NextConfig = {
       './scripts/database-url.mjs',
       './scripts/ensure-db.mjs',
       './scripts/prepare-runtime.mjs',
+      './scripts/run-command.mjs',
       './prisma/seed.mjs',
       './prisma/schema.prisma',
       './prisma/migrations/**/*',

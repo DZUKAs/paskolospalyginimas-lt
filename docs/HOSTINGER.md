@@ -39,3 +39,9 @@ Panašiai atskirai patvirtinkite `data/uploads` išsaugojimą ir atsargines kopi
 - Serveris paleistas su nauja DB, neleidus rankinių migracijų. Pagrindinis, palyginimo, Credit24 apžvalgos ir naujienų puslapiai grąžino HTTP 200 bei tikrą turinį.
 - Atskirame kataloge atliktas `npm ci --omit=dev`, be vietinės .env ir DB, ir patikrintas toks pats serverio paleidimas. Tai patikrina, kad bootstrap nepriklauso nuo tsx ar dev-only Prisma CLI.
 - Tai vietinės produkcinės kopijos patikra; ji nėra Hostinger jau paskelbto leidimo veikimo patvirtinimas.
+
+## Kai hPanel rodo tik bendrą instrumentation klaidą
+
+Kai naudojama paveldima child proceso stderr išvestis, valdomas hostingas gali išsaugoti tik viršutinę Next.js klaidą `Command failed ... prepare-runtime.mjs` ir prarasti vidinę priežastį. `scripts/run-command.mjs` dabar užfiksuoja subprocess stdout/stderr, grąžinimo statusą ir signalą, o nesėkmės atveju įtraukia juos į tėvinį Error. Pranešimai žymimi `[database:bootstrap]`, `[database:migrate]` arba `[database:seed]`. Žinomos aplinkos paslapčių reikšmės užmaskuojamos; pats aplinkos turinys neišvedamas.
+
+Registravimas nekeičia migracijų ar DB duomenų ir nepaverčia nesėkmingo paleidimo sėkmingu. Jo paskirtis — pateikti konkrečią Hostinger runtime nesėkmę, prieš parenkant kitą pataisymą. Du papildomi testai patvirtina išlaikytą child stderr / exit status ir paslapčių pašalinimą, taip pat ankstyvo paruošimo sutrikimo priežasties išlikimą tėviniame pranešime.
