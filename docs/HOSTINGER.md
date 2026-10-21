@@ -17,7 +17,7 @@ Prisma CLI yra produkcinė priklausomybė; runtime nepriklauso nuo `tsx` ar kit�
 ## hPanel nustatymai peržiūrai
 
 - Next.js, šaka main, Node.js 24.x, katalogas ./.
-- Build komanda: `npm run db:generate && npm run db:migrate && npm run db:seed && npm run build`.
+- Build komanda: `npm run build`. npm automatiškai prieš ją vykdo `prebuild`: sugeneruoja Prisma klientą, pritaiko migracijas ir vieną kartą paruošia pradinius duomenis. Tai suderinama su hPanel vienos komandos pasirinkimo sąrašu.
 - Jei rodomas start laukas: `npm start`. Valdomo Next.js paleidimo atveju bootstrap vykdomas per instrumentation.
 - `DATABASE_URL=file:./dev.db` — peržiūros DB šio konkretaus leidimo `prisma/` kataloge.
 - `NEXTAUTH_URL` ir `SITE_URL` — tikras HTTPS laikino domeno adresas.
