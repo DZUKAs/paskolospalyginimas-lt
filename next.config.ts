@@ -1,4 +1,5 @@
 import type { NextConfig } from 'next';
+import { runtimePackageIncludes } from './scripts/runtime-package-includes.mjs';
 import { readFileSync } from 'node:fs';
 const legacy = JSON.parse(readFileSync('docs/migration/source/inventory.json', 'utf8')) as {
   url: string;
@@ -22,7 +23,7 @@ const config: NextConfig = {
       './prisma/seed.mjs',
       './prisma/schema.prisma',
       './prisma/migrations/**/*',
-      './node_modules/prisma/**/*',
+      ...runtimePackageIncludes(),
       './node_modules/@prisma/**/*',
     ],
   },

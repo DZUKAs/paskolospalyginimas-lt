@@ -35,7 +35,7 @@ Panašiai atskirai patvirtinkite `data/uploads` išsaugojimą ir atsargines kopi
 ## Pataisymo patikros
 
 - Produkcinis Next.js build ir TypeScript patikra — sėkmingi.
-- 10 testų — visi praėjo. Nauji testai atkuria tuščią DB, tikrina lenteles ir 6 kreditorių / 6 publikacijų turinį, pakartotinį paleidimą, redaguoto teksto išlikimą bei sąmoningai ištrintos publikacijos neatsikūrimą.
+- 12 testų — visi praėjo. Nauji testai atkuria tuščią DB, tikrina lenteles ir 6 kreditorių / 6 publikacijų turinį, pakartotinį paleidimą, redaguoto teksto išlikimą bei sąmoningai ištrintos publikacijos neatsikūrimą.
 - Serveris paleistas su nauja DB, neleidus rankinių migracijų. Pagrindinis, palyginimo, Credit24 apžvalgos ir naujienų puslapiai grąžino HTTP 200 bei tikrą turinį.
 - Atskirame kataloge atliktas `npm ci --omit=dev`, be vietinės .env ir DB, ir patikrintas toks pats serverio paleidimas. Tai patikrina, kad bootstrap nepriklauso nuo tsx ar dev-only Prisma CLI.
 - Tai vietinės produkcinės kopijos patikra; ji nėra Hostinger jau paskelbto leidimo veikimo patvirtinimas.
@@ -45,3 +45,13 @@ Panašiai atskirai patvirtinkite `data/uploads` išsaugojimą ir atsargines kopi
 Kai naudojama paveldima child proceso stderr išvestis, valdomas hostingas gali išsaugoti tik viršutinę Next.js klaidą `Command failed ... prepare-runtime.mjs` ir prarasti vidinę priežastį. `scripts/run-command.mjs` dabar užfiksuoja subprocess stdout/stderr, grąžinimo statusą ir signalą, o nesėkmės atveju įtraukia juos į tėvinį Error. Pranešimai žymimi `[database:bootstrap]`, `[database:migrate]` arba `[database:seed]`. Žinomos aplinkos paslapčių reikšmės užmaskuojamos; pats aplinkos turinys neišvedamas.
 
 Registravimas nekeičia migracijų ar DB duomenų ir nepaverčia nesėkmingo paleidimo sėkmingu. Jo paskirtis — pateikti konkrečią Hostinger runtime nesėkmę, prieš parenkant kitą pataisymą. Du papildomi testai patvirtina išlaikytą child stderr / exit status ir paslapčių pašalinimą, taip pat ankstyvo paruošimo sutrikimo priežasties išlikimą tėviniame pranešime.
+
+## `Cannot find module 'effect'` paleidžiant migracijas
+
+2026-10-22 runtime žurnalas parodė `@prisma/config/dist/index.js` → `prisma/build/index.js` klaidą: trūksta `effect`. Ankstesni tracing globai kopijavo `prisma` ir `@prisma` katalogus, tačiau ne jų išorines priklausomybes. Vien failo įtraukimas per `outputFileTracingIncludes` nepriverčia Next sekti to failo importų.
+
+`scripts/runtime-package-includes.mjs` pagal užrakintą npm priklausomybių medį įtraukia visą Prisma CLI produkcinių priklausomybių grandinę, įskaitant įdėtus paketus. Tai apima `effect`, jo priklausomybes ir kitus Prisma konfigūracijos paketus, nepridedant visų kūrimo įrankių į runtime.
+
+Po `npm run build` paleiskite `npm run test:artifact`. Patikra sukuria izoliuotą laikiną katalogą tik iš Next trace manifestų priklausomybių, build ir public failų; jame nevykdomas npm install. Su nauja SQLite DB tikrinamos migracijos, seed, Next instrumentation paleidimas ir pagrindinio, palyginimo bei naujienų puslapių HTTP 200. Katalogas ir serveris po patikros pašalinami. Ankstesnis bandymas su visu `npm ci --omit=dev` medžiu tokio pakavimo trūkumo neaptiko.
+
+hPanel lieka ta pati `npm run build` komanda. Reikia įdiegti naujausią main commit; dėl šio pataisymo aplinkos kintamųjų keisti nereikia.
