@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import type { Creditor } from '@prisma/client';
 import { Logo, Range } from './shared-client';
-import { calculate, money } from '@/lib/pricing';
+
 export function Comparison({
   creditors,
   initialAmount = 3000,
@@ -17,9 +17,6 @@ export function Comparison({
   const [amount, setAmount] = useState(initialAmount),
     [months, setMonths] = useState(initialMonths),
     [sort, setSort] = useState('name'),
-    [free, setFree] = useState(false),
-    [fast, setFast] = useState(false),
-    [always, setAlways] = useState(false),
     [chosen, setChosen] = useState<string[]>([]),
     [side, setSide] = useState(false);
   const filtered = creditors
@@ -28,37 +25,27 @@ export function Comparison({
         (c.amountMin == null || amount >= c.amountMin) &&
         (c.amountMax == null || amount <= c.amountMax) &&
         (c.termMin == null || months >= c.termMin) &&
-        (c.termMax == null || months <= c.termMax) &&
-        (!free || c.firstFree === true) &&
-        (!fast || c.fast === true) &&
-        (!always || c.payout247 === true),
+        (c.termMax == null || months <= c.termMax),
     )
     .sort((a, b) =>
-      sort === 'price'
-        ? (calculate(a, amount, months)?.total ?? Infinity) -
-          (calculate(b, amount, months)?.total ?? Infinity)
-        : sort === 'amount'
-          ? (b.amountMax ?? -1) - (a.amountMax ?? -1)
-          : sort === 'rating'
-            ? (b.rating ?? -1) - (a.rating ?? -1)
-            : a.name.localeCompare(b.name, 'lt'),
+      sort === 'amount'
+        ? (b.amountMax ?? -1) - (a.amountMax ?? -1)
+        : a.name.localeCompare(b.name, 'lt'),
     );
   function toggle(id: string) {
     setChosen((v) => (v.includes(id) ? v.filter((i) => i !== id) : v.length < 3 ? [...v, id] : v));
   }
   function price(c: Creditor) {
-    const p = calculate(c, amount, months);
-    return p ? (
-      <>
-        <strong>{money(p.total)}</strong>
-        <p>
-          {money(p.monthly)} / mėn. + {money(p.upfront)} pradinis mokestis. Orientacinis anuitetas.
-        </p>
-        <p>BVKKMN {c.apr} %</p>
-        <p>{c.example}</p>
-      </>
-    ) : (
-      <span className="tiny">PATIKRINTI — trūksta patvirtintos kainodaros ir pavyzdžio.</span>
+    return (
+      <div className="tiny">
+        <strong>Teikėjo pavyzdys</strong>
+        <p>{c.example || 'Pavyzdys nenurodytas. Prašykite individualaus pasiūlymo.'}</p>
+        <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer">
+          Šaltinis
+        </a>{' '}
+        · Suvestinė{' '}
+        {new Date(c.sourceCapturedAt).toLocaleDateString('lt-LT', { timeZone: 'Europe/Vilnius' })}
+      </div>
     );
   }
   function actions(c: Creditor) {
@@ -107,39 +94,23 @@ export function Comparison({
             Rūšiuoti
             <select value={sort} onChange={(e) => setSort(e.target.value)}>
               <option value="name">Pagal pavadinimą</option>
-              <option value="price">Pagal bendrą kainą</option>
+
               <option value="amount">Pagal didžiausią sumą</option>
-              <option value="rating">Pagal vertinimą</option>
             </select>
           </label>
         </div>
-        <div className="checkboxes">
-          <label>
-            <input type="checkbox" checked={free} onChange={(e) => setFree(e.target.checked)} />{' '}
-            Pirmoji paskola 0 %
-          </label>
-          <label>
-            <input type="checkbox" checked={fast} onChange={(e) => setFast(e.target.checked)} />{' '}
-            Greitas išmokėjimas
-          </label>
-          <label>
-            <input type="checkbox" checked={always} onChange={(e) => setAlways(e.target.checked)} />{' '}
-            Išmokėjimas 24/7
-          </label>
-        </div>
         <p className="tiny" style={{ margin: '15px 0 0' }}>
-          Filtrai remiasi tik patvirtintomis savybėmis. Nežinoma sąlyga nereiškia „taip“. Ribos iš
-          seno šaltinio dar tikslinamos.
+          Suma ir terminas atrenka produktus; pavyzdžiai pagal filtrus neperskaičiuojami. Nežinomas
+          minimalias ribas būtina pasitikslinti pas teikėją.
         </p>
       </section>
       <p role="status" className="status-line">
-        Rasti {filtered.length} kreditoriai · Kainos be patvirtintų duomenų neskaičiuojamos ·
-        Nepatvirtinti balai nerodomi
+        Rasti {filtered.length} teikėjai · Skirtingų sumų ir terminų pavyzdžiai nėra kainos
+        reitingas
       </p>
       {!filtered.length && (
         <div className="notice">
-          Pagal pasirinktus filtrus patvirtintų rezultatų nėra. Pakeiskite sumą, terminą arba
-          išjunkite savybių filtrus.
+          Pagal pasirinktą sumą ir terminą rezultatų nėra. Pakeiskite sumą arba terminą.
         </div>
       )}
       <div className="table-wrap desktop">
@@ -151,10 +122,9 @@ export function Comparison({
                 'Kreditorius / lyginti',
                 'Suma / terminas',
                 'BVKKMN',
-                'Bendra grąžintina suma',
+                'Pavyzdžio sąlygos ir bendra suma',
                 'Pirmoji paskola',
                 'Išmokėjimas',
-                'Vertinimas',
                 'Veiksmai',
               ].map((h) => (
                 <th key={h} scope="col">
@@ -168,6 +138,7 @@ export function Comparison({
               <tr key={c.id}>
                 <td>
                   <Logo c={c} />
+                  <p className="tiny">{c.tagline}</p>
                   <label className="tiny">
                     <input
                       type="checkbox"
@@ -184,19 +155,12 @@ export function Comparison({
                   <p>
                     <Range min={c.termMin} max={c.termMax} unit="mėn." />
                   </p>
-                  <span className="tiny">PATIKRINTI</span>
+                  <span className="tiny">{c.verificationNotes}</span>
                 </td>
-                <td>
-                  {c.pricingVerified && c.verifiedAt && c.apr != null ? `${c.apr} %` : 'PATIKRINTI'}
-                </td>
+                <td>{c.example && c.apr != null ? `${c.apr} % (pavyzdžio)` : 'Nenurodyta'}</td>
                 <td>{price(c)}</td>
                 <td>{c.firstTerms || 'PATIKRINTI'}</td>
                 <td>{c.speed || 'PATIKRINTI'}</td>
-                <td>
-                  {c.rating != null && c.ratingBasis
-                    ? `${c.rating}/5 · ${c.ratingBasis}`
-                    : 'PATIKRINTI'}
-                </td>
                 <td>{actions(c)}</td>
               </tr>
             ))}
@@ -209,6 +173,7 @@ export function Comparison({
             <article className="card" key={c.id}>
               <div className="card-top">
                 <Logo c={c} />
+                <p className="tiny">{c.tagline}</p>
                 <label className="tiny">
                   <input
                     type="checkbox"
@@ -222,29 +187,27 @@ export function Comparison({
               </div>
               <dl className="metrics">
                 <div>
-                  <dt>Suma*</dt>
+                  <dt>Suma</dt>
                   <dd>
                     <Range min={c.amountMin} max={c.amountMax} unit="€" />
                   </dd>
                 </div>
                 <div>
-                  <dt>Terminas*</dt>
+                  <dt>Terminas</dt>
                   <dd>
                     <Range min={c.termMin} max={c.termMax} unit="mėn." />
                   </dd>
                 </div>
               </dl>
               <p className="tiny">
-                * PATIKRINTI. BVKKMN:{' '}
-                {c.pricingVerified && c.apr != null ? `${c.apr} %` : 'PATIKRINTI'}
+                Pavyzdžio BVKKMN: {c.example && c.apr != null ? `${c.apr} %` : 'Nenurodyta'}
               </p>
+              <p className="tiny">{c.verificationNotes}</p>
               <div>{price(c)}</div>
               <p className="tiny">
                 Pirmoji paskola: {c.firstTerms || 'PATIKRINTI'}
                 <br />
                 Išmokėjimas: {c.speed || 'PATIKRINTI'}
-                <br />
-                Vertinimas: {c.rating != null && c.ratingBasis ? `${c.rating}/5` : 'PATIKRINTI'}
               </p>
               <div className="card-foot">{actions(c)}</div>
             </article>
@@ -283,6 +246,8 @@ export function Comparison({
               </p>
               <p className="tiny">{c.summary}</p>
               {price(c)}
+              <p className="tiny">Pirmoji paskola: {c.firstTerms}</p>
+              <p className="tiny">Išmokėjimas: {c.speed}</p>
               <p className="tiny">{c.verificationNotes}</p>
               {actions(c)}
             </div>

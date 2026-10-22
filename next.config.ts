@@ -21,6 +21,7 @@ const config: NextConfig = {
       './scripts/prepare-runtime.mjs',
       './scripts/run-command.mjs',
       './prisma/seed.mjs',
+      './prisma/provider-update.mjs',
       './prisma/schema.prisma',
       './prisma/migrations/**/*',
       ...runtimePackageIncludes(),

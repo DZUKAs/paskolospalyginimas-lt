@@ -1,3 +1,4 @@
+import { updateProviders } from './provider-update.mjs';
 import { PrismaClient } from '@prisma/client';
 import { resolveDatabaseUrl } from '../scripts/database-url.mjs';
 process.env.DATABASE_URL = resolveDatabaseUrl();
@@ -246,4 +247,6 @@ async function main() {
     await populate(db);
   }
 }
-main().finally(() => db.$disconnect());
+main()
+  .then(() => updateProviders(db))
+  .finally(() => db.$disconnect());

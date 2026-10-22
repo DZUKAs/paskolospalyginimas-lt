@@ -71,9 +71,8 @@ export default async function Home() {
           ))}
         </div>
         <div className="notice">
-          Duomenys perimti iš ankstesnės svetainės 2026-10-21. Aktualios kainos, BVKKMN ir
-          reprezentatyvūs pavyzdžiai — <strong>PATIKRINTI</strong>. Tai nėra kreditoriaus
-          pasiūlymas.
+          Sąlygos pagal 2026-10-22 teikėjų suvestinę. Pavyzdžių sumos ir terminai skiriasi. Galutinę
+          kainą ir akcijų sąlygas patvirtina individualus kreditoriaus pasiūlymas.
         </div>
       </section>
       <section className="steps-section">

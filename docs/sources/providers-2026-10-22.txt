@@ -1,0 +1,227 @@
+VARTOJIMO PASKOLŲ TEIKĖJŲ INFORMACIJA
+Patikrinta: 2026-10-22
+Rinka: Lietuva
+
+PASKIRTIS IR SVARBI PASTABA
+Šis dokumentas skirtas palyginimo svetainės duomenų bazei ir redakciniam patikrinimui. Sumos, terminai, palūkanos, BVKKMN, akcijos ir išmokėjimo laikas gali keistis. Prieš rodant pasiūlymą vartotojui, atnaujink duomenis pagal kreditoriaus oficialią skaičiuoklę / standartinę informaciją apie vartojimo kreditą. Individualios sąlygos priklauso nuo mokumo vertinimo.
+
+Lentelės sąvokos:
+- Paskolos suma: sutartyje nurodyta kredito suma.
+- Išmokama suma: suma, faktiškai pervedama klientui; ji gali būti mažesnė dėl išskaičiuotų mokesčių.
+- BVKKMN: bendros vartojimo kredito kainos metinė norma, apimanti palūkanas ir žinomus privalomus mokesčius.
+- Bendra grąžintina suma / BVKGMS: suma, kurią klientas sumoka per visą konkretų pavyzdžio laikotarpį.
+- Skirtingų įmonių pavyzdžiai nėra tiesiogiai palyginami, jei skiriasi suma, terminas, išmokama suma ar skaičiavimo prielaidos.
+
+1. BOBUTĖS PASKOLA
+Prekės ženklas: Bobutės paskola
+Kreditorius: BnP Finance, UAB, įm. k. 302447985.
+Oficialūs puslapiai: https://www.bobutespaskola.lt/ ; https://www.bobutespaskola.lt/kontaktai
+
+Suma ir terminas:
+- Oficiali svetainė: 50–10 000 EUR.
+- Terminas nurodomas nevienodai: DUK / apie mus skelbia 3–84 mėn.; skaičiuoklės valdiklis buvo rodomas nuo 12 iki 84 mėn. Prieš įkeliant kaip vieną bendrą intervalą patikrinti tiesioginėje skaičiuoklėje.
+
+Kaina, oficialus pavyzdys:
+- 300 EUR / 12 mėn.; 12 įmokų po 32,19 EUR; MPN 27,6%; sutarties sudarymo mokestis 3,30 EUR/mėn.; BVKKMN 62,35%; iš viso mokama 386,28 EUR.
+- Oficialiuose puslapiuose taip pat nurodytas BVKKMN intervalas 22,68–136,27%, priklausantis nuo sumos ir termino. Tai nėra vienas visiems klientams taikomas tarifas.
+
+Pirmoji paskola / nuolaida:
+- Svetainėje rodoma nuolaida palūkanoms pagal sumą: 10% nuolaida 50–500 EUR sumai, 20% nuolaida 600–5 000 EUR sumai. Tai pateikta kaip palūkanų nuolaida, ne kaip nemokama paskola. Akcijos kodas, galiojimas ir sąlygos turi būti patikrinti prieš rodant.
+
+Išmokėjimas:
+- Bendrovė teigia, kad kreditą gali suteikti per kelias minutes; realus pervedimo laikas priklauso ir nuo banko / pavedimų apdorojimo.
+
+Palyginimo veiksmas:
+- CTA: „Gauti paskolą“ → https://www.bobutespaskola.lt/
+- Nežymėti „Paraiškos nuoroda: PATIKRINTI“; pateikti tiesioginę oficialią nuorodą, jei naudojamas partnerio sekimo URL – patikrinti jį atskirai.
+
+2. CREDIT24
+Prekės ženklas: Credit24
+Kreditorius: IPF Digital Lietuva, UAB, įm. k. 300622891.
+Oficialūs puslapiai: https://credit24.lt/ ; https://credit24.lt/kredito-linija
+Lietuvos banko dalyvio kortelė: https://www.lb.lt/lt/finansu-rinku-dalyviai/ipf-digital-lietuva-uab
+
+Svarbu dėl produkto:
+- Credit24 pagrindiniame puslapyje pristatoma kredito linija 100–7 000 EUR ir iki 36 mėn. Kai kurie atskiri Credit24 puslapiai vis dar nurodo iki 5 000 EUR ir 3–36 mėn. Tai gali būti skirtingi produktai arba puslapių neatitikimas. Lentelėje aiškiai įvardyti „kredito linija“ ar „vartojimo paskola“ ir rodyti pasirinktam produktui taikomą ribą; nepalikti vieno neapibrėžto limito.
+
+Kaina, oficialus pavyzdys kredito linijai:
+- 500 EUR panaudotas limitas, grąžinamas per 3–36 mėn.; fiksuota MPN 23,88%; minimali mėnesio įmoka 19,69 EUR; BVKKMN maks. 27,09%; bendra mokama suma 708,70 EUR.
+- Palūkanos skaičiuojamos pagal panaudotą kreditą; nepanaudotas kredito limitas oficialiai pristatomas kaip nieko nekainuojantis.
+
+Pirmoji paskola / naujas klientas:
+- Oficialiame puslapyje rašoma, kad nauji klientai gali gauti geresnių pasiūlymų. Viešai pateiktoje standartinėje informacijoje 0% pirmos paskolos pasiūlymas nepatvirtintas. Nerašyti „pirma paskola nemokamai“; asmeninę kainą rodyti po pasiūlymo.
+
+Išmokėjimas:
+- Svetainėje reklamuojamas pervedimas per 15 min. Paskolų išdavimas nurodomas I–V 08:00–20:00, VI 08:00–17:00, VII 08:00–15:00; tai nėra garantija, kad kiekvienas prašymas bus patvirtintas ar įskaitytas per 15 min.
+
+Palyginimo veiksmas:
+- CTA: „Gauti pasiūlymą“ → https://credit24.lt/
+
+3. FINBEE
+Prekės ženklas / platforma: Finbee
+Kreditorius ir tarpusavio skolinimo platformos operatorius: UAB „Finansų bitė“.
+Oficialus puslapis: https://www.finbee.lt/vartojimo-paskola/
+
+Suma ir terminas:
+- 300–25 000 EUR; 1–10 metų (12–120 mėn.).
+- Finbee yra P2P tarpusavio skolinimo platforma: paraišką administruoja platforma, o finansavimas siejamas su investuotojų lėšomis. Neapibūdinti kaip garantuoto momentinio kredito.
+
+Kaina, oficialus tipinis pavyzdys:
+- Sutarties suma 1 000 EUR / 5 metai; klientui pervedama 940 EUR; fiksuota MPN 10%; sutarties mokestis 4% (40 EUR); kreditingumo vertinimo mokestis 20 EUR; administravimo mokestis 0,37% nuo paskolos likučio per mėnesį; BVKKMN 17,76%; mėnesio įmoka 23,09 EUR; iš viso grąžinama 1 385,23 EUR.
+- Oficialiai skelbiama metinė palūkanų norma nuo 7%; maksimalus BVKKMN 63,97%. Konkretus pasiūlymas individualus.
+
+Pirmoji paskola:
+- Specialus nemokamos pirmos paskolos pasiūlymas oficialioje vartojimo paskolos informacijoje nepatvirtintas.
+
+Išmokėjimas:
+- Paraiška ir mokumo vertinimas vyksta internetu, bet oficialus puslapis negarantuoja universalaus konkretaus pinigų pervedimo laiko. Rodant „per 15 min.“ ar kitą skubos pažadą – netinka.
+
+Palyginimo veiksmas:
+- CTA: „Pildyti paraišką“ → https://www.finbee.lt/vartojimo-paskola/
+
+Ypač svarbu svetainei: atskirai rodyti sutartyje nurodytą 1 000 EUR kreditą ir klientui pervedamus 940 EUR. Vien „paskolos suma 1 000 EUR“ neatskleidžia išskaičiuotų mokesčių.
+
+4. SAVY
+Prekės ženklas / platforma: SAVY (gosavy.com)
+Operatorius / vartojimo kredito davėjas: UAB „Bendras finansavimas“.
+Oficialūs puslapiai: https://gosavy.com/vartojimo-paskola/ ; https://gosavy.com/paslaugu-ikainiai/
+
+Suma ir terminas:
+- 300–35 000 EUR; 3–120 mėn. (iki 10 metų).
+- SAVY yra tarpusavio skolinimo platforma ir taip pat nurodo turinti teisę teikti vartojimo paskolas tiesiogiai. Nesutapatinti kiekvieno finansavimo pasiūlymo su momentine kredito linija.
+
+Kaina, oficialus tipinis pavyzdys:
+- 5 000 EUR / 60 mėn.; fiksuota MPN 6%; vienkartinis tarpininkavimo mokestis 1,40%; mėnesinis tarpininkavimo mokestis 0,22% nuo negrąžintos sumos; BVKKMN 9,64%; mėnesio įmoka 102,92 EUR; iš viso grąžinama 6 245,22 EUR.
+- „Nuo 6%“ yra pradinė palūkanų norma. Pagal oficialų įkainių puslapį taikomi ir vienkartinis, ir mėnesinis tarpininkavimo mokesčiai; jų dydis priklauso nuo reitingo ir paskolos sumos.
+
+Pirmoji paskola:
+- 0% pirmos paskolos pasiūlymo oficialioje sąlygų informacijoje nėra. Kartais taikomi nuolaidų kodai / akcijos; rodyti tik patvirtinus aktyvų pasiūlymą.
+
+Išmokėjimas:
+- SAVY nurodo, kad atsakymą dėl galimybės skolintis paprastai pateikia per 1 valandą, tačiau tai nėra garantuotas lėšų įskaitymo laikas. Nepateikti „per valandą gausite pinigus“.
+
+Palyginimo veiksmas:
+- CTA: „Gauti paskolą“ → https://gosavy.com/vartojimo-paskola/
+
+5. SMS PINIGAI
+Prekės ženklas: SMSPinigai.lt
+Kreditorius: UAB „Nordecum“.
+Oficialūs puslapiai: https://smspinigai.lt/ ; https://smspinigai.lt/vartojimo-paskola ; https://smspinigai.lt/kontaktai
+Lietuvos banko dalyvio kortelė: https://www.lb.lt/lt/finansu-rinku-dalyviai/uab-nordecum
+
+Suma ir terminas:
+- Vartojimo paskola: 100–20 000 EUR; 3 mėn.–8 metai (96 mėn.).
+- Svetainėje taip pat yra atskirų produktų, tokių kaip kredito linija, refinansavimas ir paskola su turto įkeitimu; jų ribų nemaišyti su šia vartojimo paskola.
+
+Kaina, oficialus pavyzdys:
+- 3 000 EUR / 36 mėn.; fiksuota MPN 4,32%; mėnesinis administravimo mokestis 23,25 EUR; sutarties sudarymo mokestis 0 EUR; mėnesio įmoka 112,34 EUR; bendra mokama suma 4 044,04 EUR; BVKKMN 22%.
+- Svetainėje minima metinė palūkanų norma nuo 8,9%, tačiau tipiniame pavyzdyje 4,32% – tai du skirtingi rodomi duomenys / pasiūlymai. Pateikti kartu su žyma, kad „nuo“ norma ir tipinis pavyzdys nėra tas pats konkretus pasiūlymas.
+
+Pirmoji paskola:
+- Oficialus puslapis reklamuoja pirmą kreditą iki 1 000 EUR ir iki 12 mėn. nemokamai / be palūkanų. Akcijos sąlygos ir taikomi mokesčiai gali turėti įtakos bendrai kainai. Nenaudoti žodžio „nemokama“, kol nepatikrinta, kad konkrečiu atveju BVKKMN ir visa mokėtina suma iš tiesų yra 0 EUR / lygi pasiskolintai sumai.
+
+Išmokėjimas:
+- Svetainė teigia, kad sprendimas paprastai pateikiamas per kelias minutes. Neradau pakankamo pagrindo žadėti garantuotą pinigų pervedimą per konkrečias minutes.
+
+Palyginimo veiksmas:
+- CTA: „Teikti paraišką“ → https://smspinigai.lt/
+
+6. VIVUS
+Prekės ženklas: Vivus Finance / Vivus.lt
+Kreditorius: UAB „Credit Service“, įm. k. 302431575.
+Oficialūs puslapiai: https://www.vivus.lt/ ; https://www.vivus.lt/info/greitos-paskolos ; https://www.vivus.lt/info/paskolos-skaiciuokle
+Lietuvos banko dalyvio kortelė: https://www.lb.lt/lt/finansu-rinku-dalyviai/uab-credit-service
+
+Suma ir terminas:
+- Oficiali svetainė nurodo paskolas iki 15 000 EUR ir terminus nuo 3 iki 84 mėn.
+- Minimalią sumą įrašyti tik patvirtinus tiesioginėje skaičiuoklėje. Pateiktose oficialiose puslapių ištraukose aiškiai patvirtinta viršutinė riba ir terminas, bet ne viena visiems produktams taikoma minimali suma.
+
+Kaina, dabartinis oficialus tipinis pavyzdys pagrindiniame puslapyje:
+- 1 500 EUR / 36 mėn.; BVKKMN 32,4%; MPN 27,37%; administravimo mokestis 0%; sutarties mokestis 0%; mėnesio įmoka 62,35 EUR; bendra mokama suma 2 244,54 EUR.
+- Kituose oficialiuose Vivus produktų puslapiuose rodomi kiti pavyzdžiai, pvz., 3 000 EUR / 36 mėn., BVKKMN 42,2%, bendra suma 4 930,92 EUR. Tai individualių / produktų puslapių pavyzdžiai – vienoje svetainės eilutėje naudoti vieną aiškiai apibrėžtą pavyzdį, nemaišyti jų.
+
+Pirmoji paskola / nuolaida:
+- Oficialiuose patikrintuose puslapiuose nemokamos pirmos paskolos pasiūlymas nepatvirtintas. Vengti tokių teiginių, nebent konkreti akcija aktyvi ir jos sąlygos patikrintos.
+
+Išmokėjimas:
+- Vivus teigia, kad po paraiškos patvirtinimo pinigai paprastai pervedami per 10–15 min. Tai priklauso nuo patvirtinimo ir mokėjimų vykdymo; formuluoti kaip bendrovės nurodomą įprastą laiką, ne garantiją.
+
+Palyginimo veiksmas:
+- CTA: „Gauti pasiūlymą“ / „Teikti paraišką“ → https://www.vivus.lt/
+
+KĄ PATAISYTI PATEIKTOJE LENTELĖJE
+1) Bobutės paskola: pateikta 50–15 000 EUR, 12–72 mėn. Oficialiai dabar rodoma suma iki 10 000 EUR; terminas DUK / apie mus 3–84 mėn., tačiau skaičiuoklės pradinis taškas gali skirtis. 15 000 EUR ir 72 mėn. nelaikyti patvirtintu šios paskolos limitu.
+2) Credit24: pateikta 100–5 000 EUR. Pagrindiniame Credit24 puslapyje šiuo metu rodoma kredito linija iki 7 000 EUR; kai kurie kiti puslapiai mini iki 5 000 EUR. Produktą būtina atskirti ir tikrinti jo konkrečią skaičiuoklę.
+3) Finbee: sumą ir terminą galima užpildyti kaip 300–25 000 EUR, 12–120 mėn. BVKKMN turi būti rodomas pagal tą patį konkretų pavyzdį, ne vien „nuo“ palūkanų normą.
+4) Savy: užpildyti 300–35 000 EUR, 3–120 mėn. Tai P2P platforma / kreditorius su papildomais tarpininkavimo mokesčiais; rodyti BVKKMN ir bendrą mokamą sumą.
+5) SMS Pinigai: pateikta 100–15 000 EUR, 3–72 mėn. Vartojimo paskolai oficialiai rodoma 100–20 000 EUR ir 3–96 mėn. Akcijos antraštė: pirmas kreditas iki 1 000 EUR ir iki 12 mėn. be palūkanų; būtina patikrinti bendrą kainą ir išimtis.
+6) Vivus: pateikta suma / terminas nepatvirtinti. Oficiali svetainė rodo iki 15 000 EUR ir 3–84 mėn.; skelbiami pavyzdžiai skiriasi, todėl vieną pavyzdį parinkti ir pažymėti data.
+7) „BVKKMN“, „bendra grąžintina suma“, „pirmoji paskola“, „išmokėjimas“ ir „vertinimas“ dabar užpildyti tekstu PATIKRINTI. Pakeisti konkrečiais, šaltiniu ir data paremtais faktais arba aiškiai rodyti „nenurodyta / tikrinti individualų pasiūlymą“.
+8) Neįrašyti vienos „bendros grąžintinos sumos“ be sumos ir termino. Kiekvienam kreditoriui rodyti lygiai apibrėžtą pavyzdį, pvz., kredito suma, terminas, mėnesio įmoka, BVKKMN, bendra grąžinama suma ir, kur aktualu, į sąskaitą pervedama suma.
+9) „Vertinimas“ nėra kreditoriaus paskolos sąlyga. Jei tai vartotojų įvertinimas, nurodyti šaltinį, atsiliepimų skaičių, datą ir metodiką. Jei tai redakcinis reitingas, publikuoti aiškią vienodą vertinimo metodiką ir pažymėti, kad tai svetainės vertinimas, o ne Lietuvos banko reitingas. Jei patikimo šaltinio nėra, lauką slėpti.
+10) Kiekvieną CTA („Pateikti paraišką“) sieti su atitinkamos įmonės oficialia paskolos produkto nuoroda arba patikrintu partnerio URL. Patikrinti, ar nuoroda veda į paskolos, o ne bendrą / kitą produkto puslapį.
+
+REKOMENDUOJAMOS PAPILDOMOS Palyginimo laukų reikšmės
+- Kreditoriaus juridinis pavadinimas ir įmonės kodas.
+- Produkto tipas: vartojimo paskola / kredito linija / P2P paskola.
+- Paskolos suma (nominali) ir suma į sąskaitą (jei skiriasi).
+- Terminas.
+- Tipinio pavyzdžio suma ir terminas.
+- MPN, BVKKMN, mėnesio įmoka, bendra mokama suma.
+- Sutarties sudarymo / administravimo / tarpininkavimo mokesčiai.
+- Pirmos paskolos akcijos sąlygos ir galiojimo data.
+- Išmokėjimo greitis kaip „įprastai nurodoma“, ne garantija.
+- Pasiūlymo patikrinimo data ir oficialus šaltinis.
+
+ATSAKINGO SKOLINIMO / TEISINĖS INFORMACIJOS PATIKRA
+- Lietuvoje vartojimo kreditą gali teikti Lietuvos banko viešajame vartojimo kredito davėjų sąraše esantis subjektas. Patikrink juridinį kreditoriaus pavadinimą, ne vien prekės ženklą.
+- Lietuvos bankas nurodo, kad vartotojai turi palyginti BVKKMN ir bendrą kainą, o prieš sutartį turi gauti standartinę informaciją apie vartojimo kreditą.
+- Palyginimo puslapyje aiškiai atskleisti, jei nuoroda yra reklaminė / partnerio nuoroda arba svetainė gauna komisinį. Paaiškinti reitingavimo kriterijus ir nesudaryti įspūdžio, kad vieta lentelėje reiškia Lietuvos banko rekomendaciją.
+- Kredito davėjo pasiūlymai, reklaminės akcijos ir teisės aktų reikalavimai gali keistis; dinaminiai skaičiai atnaujintini reguliariai.
+
+PAGRINDINIAI ŠALTINIAI
+(Lankytasi / paieška atlikta 2026-10-22; oficialūs šaltiniai pažymėti „oficialus“.)
+
+Lietuvos bankas – vartojimo kredito davėjai / viešasis sąrašas (oficialus):
+https://www.lb.lt/lt/vartojimo-kredito-davejai
+https://www.lb.lt/lt/finansu-rinku-dalyviai?market=1&type=30
+
+Bobutės paskola (oficialūs):
+https://www.bobutespaskola.lt/
+https://www.bobutespaskola.lt/faq
+https://www.bobutespaskola.lt/paskolos-skaiciuokle
+https://www.bobutespaskola.lt/kontaktai
+
+Credit24 (oficialūs):
+https://credit24.lt/
+https://credit24.lt/kredito-linija
+https://credit24.lt/asmenine-paskola
+https://www.lb.lt/lt/finansu-rinku-dalyviai/ipf-digital-lietuva-uab
+
+Finbee (oficialūs):
+https://www.finbee.lt/vartojimo-paskola/
+https://www.finbee.lt/paslaugu-ikainiai/
+https://www.lb.lt/lt/finansu-rinku-dalyviai?market=1&type=30
+
+SAVY (oficialūs):
+https://gosavy.com/vartojimo-paskola/
+https://gosavy.com/paslaugu-ikainiai/
+https://gosavy.com/apie-savy/
+https://www.lb.lt/lt/finansu-rinku-dalyviai?market=1&type=30
+
+SMS Pinigai (oficialūs):
+https://smspinigai.lt/
+https://smspinigai.lt/vartojimo-paskola
+https://smspinigai.lt/kontaktai
+https://smspinigai.lt/article/grizta-populiariausias-pasiulymas-iki-1000-eu-nemokamai-naujiems-klientams
+https://www.lb.lt/lt/finansu-rinku-dalyviai/uab-nordecum
+
+Vivus (oficialūs):
+https://www.vivus.lt/
+https://www.vivus.lt/info/greitos-paskolos
+https://www.vivus.lt/info/paskolos-skaiciuokle
+https://www.vivus.lt/duk
+https://www.lb.lt/lt/finansu-rinku-dalyviai/uab-credit-service
+
+---
+Failas parengtas pagal pateiktos ekrano lentelės šešis prekės ženklus. Jis nepakeičia galutinės kiekvienos kredito sutarties / pasiūlymo patikros.

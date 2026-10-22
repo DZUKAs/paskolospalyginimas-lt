@@ -19,10 +19,10 @@ export function Calculator() {
               id="hero-amount"
               type="number"
               min={50}
-              max={15000}
+              max={35000}
               step={50}
               value={amount}
-              onChange={(e) => setAmount(Math.max(50, Math.min(15000, Number(e.target.value))))}
+              onChange={(e) => setAmount(Math.max(50, Math.min(35000, Number(e.target.value))))}
             />{' '}
             €
           </span>
@@ -31,14 +31,14 @@ export function Calculator() {
           aria-label="Paskolos sumos slankiklis"
           type="range"
           min={50}
-          max={15000}
+          max={35000}
           step={50}
           value={amount}
           onChange={(e) => setAmount(Number(e.target.value))}
         />
         <div className="range-ends">
           <span>50 €</span>
-          <span>15 000 €</span>
+          <span>35 000 €</span>
         </div>
       </div>
       <div className="field">
@@ -49,9 +49,9 @@ export function Calculator() {
               id="hero-months"
               type="number"
               min={3}
-              max={84}
+              max={120}
               value={months}
-              onChange={(e) => setMonths(Math.max(3, Math.min(84, Number(e.target.value))))}
+              onChange={(e) => setMonths(Math.max(3, Math.min(120, Number(e.target.value))))}
             />{' '}
             mėn.
           </span>
@@ -60,17 +60,18 @@ export function Calculator() {
           aria-label="Termino slankiklis"
           type="range"
           min={3}
-          max={84}
+          max={120}
           value={months}
           onChange={(e) => setMonths(Number(e.target.value))}
         />
         <div className="range-ends">
           <span>3 mėn.</span>
-          <span>84 mėn.</span>
+          <span>120 mėn.</span>
         </div>
       </div>
       <p className="calc-info">
-        Pasirinkite sumą ir terminą. Kainą skaičiuosime tik pagal patvirtintas kreditorių sąlygas.
+        Pasirinkite sumą ir terminą. Atrinksime produktus pagal ribas ir parodysime jų kainos
+        pavyzdžius.
       </p>
       <Link href={`/palyginimas?suma=${amount}&terminas=${months}`} className="btn lime full">
         Palyginti galimybes <ArrowUpRight size={18} />

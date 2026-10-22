@@ -44,34 +44,30 @@ export function CreditorCard({ c }: { c: Creditor }) {
     <article className="card">
       <div className="card-top">
         <Logo c={c} />
-        <span className="badge warning">{c.verifiedAt ? 'Patikrinta' : 'Tikslinama'}</span>
+        <span className="badge warning">{c.verifiedAt ? 'Patikrinta' : 'Teikėjo pavyzdys'}</span>
       </div>
       <p className="tagline">{c.tagline}</p>
       <dl className="metrics">
         <div>
-          <dt>Paskolos suma*</dt>
+          <dt>Paskolos suma</dt>
           <dd>
             <Range min={c.amountMin} max={c.amountMax} unit="€" />
           </dd>
         </div>
         <div>
-          <dt>Grąžinimo terminas*</dt>
+          <dt>Grąžinimo terminas</dt>
           <dd>
             <Range min={c.termMin} max={c.termMax} unit="mėn." />
           </dd>
         </div>
       </dl>
       <p className="tiny">
-        {c.pricingVerified && c.verifiedAt && c.example ? (
-          <>
-            BVKKMN {c.apr} %. {c.example}
-          </>
-        ) : (
-          <>
-            * Seno šaltinio duomenys. Kaina, BVKKMN ir pavyzdys: <strong>PATIKRINTI</strong>.
-          </>
-        )}
+        {c.example || 'Pavyzdys nenurodytas; kreipkitės dėl individualaus pasiūlymo.'}
+        <br />
+        Suvestinė: {c.sourceCapturedAt.toLocaleDateString('lt-LT')} ·{' '}
+        <a href={c.sourceUrl}>Šaltinis</a>
       </p>
+      <p className="tiny">{c.verificationNotes}</p>
       <div className="card-foot">
         <Link href={`/loans/${c.slug}-apzvalga/`} className="btn outline">
           Skaityti apžvalgą <ArrowUpRight size={14} />

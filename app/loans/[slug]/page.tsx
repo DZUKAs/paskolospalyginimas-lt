@@ -51,24 +51,20 @@ export default async function Review({ params }: { params: Promise<{ slug: strin
         <p style={{ marginTop: 20 }}>{c.summary}</p>
         <dl className="metrics">
           <div>
-            <dt>Paskolos suma*</dt>
+            <dt>Paskolos suma</dt>
             <dd>
               <Range min={c.amountMin} max={c.amountMax} unit="€" />
             </dd>
           </div>
           <div>
-            <dt>Terminas*</dt>
+            <dt>Terminas</dt>
             <dd>
               <Range min={c.termMin} max={c.termMax} unit="mėn." />
             </dd>
           </div>
         </dl>
         <p className="tiny">
-          * Seno šaltinio duomenys — PATIKRINTI. Aktualios palūkanos, BVKKMN ir reprezentatyvus
-          pavyzdys:{' '}
-          {c.pricingVerified && c.verifiedAt && c.example
-            ? `${c.annualRate} %, BVKKMN ${c.apr} %. ${c.example}`
-            : 'PATIKRINTI'}
+          {c.example || 'Pavyzdys nenurodytas. Prašykite individualaus pasiūlymo.'}
         </p>
         {c.applyUrl ? (
           <a className="btn" href={c.applyUrl} rel="sponsored noopener noreferrer" target="_blank">
@@ -83,10 +79,10 @@ export default async function Review({ params }: { params: Promise<{ slug: strin
         <br />
         Šaltinis:{' '}
         <a href={c.sourceUrl} rel="noopener noreferrer">
-          sena apžvalga
+          Teikėjo svetainė
         </a>{' '}
-        · Perimta {c.sourceCapturedAt.toLocaleDateString('lt-LT')} · Patvirtinta{' '}
-        {c.verifiedAt ? c.verifiedAt.toLocaleDateString('lt-LT') : 'PATIKRINTI'}
+        · Suvestinės data {c.sourceCapturedAt.toLocaleDateString('lt-LT')}. Galutines sąlygas
+        tikrinkite pas teikėją.
       </div>
       <section className="section split">
         <div className="card">
@@ -121,11 +117,7 @@ export default async function Review({ params }: { params: Promise<{ slug: strin
           <li>Gavę individualų pasiūlymą, perskaitykite sutartį, įmokų grafiką ir visą kainą.</li>
         </ol>
         <h2>Mokėjimo pavyzdys</h2>
-        <p>
-          {c.pricingVerified && c.example
-            ? c.example
-            : 'PATIKRINTI — seno šaltinio nepakanka patikimam reprezentatyviam pavyzdžiui. Iš BVKKMN vienos įmokos neskaičiuojame.'}
-        </p>
+        <p>{c.example || 'Pavyzdys nenurodytas. Prašykite individualaus pasiūlymo.'}</p>
       </div>
       <section className="section faq">
         <div>

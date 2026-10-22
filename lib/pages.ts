@@ -22,7 +22,7 @@ export const pages: Record<string, { title: string; description: string; body: s
   'reklamos-atskleidimas': {
     title: 'Skaidriai apie reklamą ir partnerystes',
     description: 'Kaip partnerių komisiniai susiję su paskolų palyginimu.',
-    body: '<h2>Partnerių nuorodos</h2><p>Svetainė gali gauti komisinius, kai lankytojas per partnerio nuorodą kreipiasi į kreditorių. Tokios nuorodos žymimos sponsored. Konkrečios sutartys ir partnerių sąrašas: PATIKRINTI su svetainės savininku.</p><h2>Palyginimo tvarka</h2><p>Numatytoji tvarka — pagal pavadinimą. Galite pasirinkti rūšiavimą pagal patvirtintą kainą, sumą ar patvirtintą vertinimą. Nepatvirtinti duomenys nėra laikomi nuline kaina ar teigiamu balu.</p><h2>Atsakomybė</h2><p>Palyginimas nėra individuali finansinė konsultacija. Mes nesuteikiame paskolų ir negarantuojame paraiškos patvirtinimo. Visada tikrinkite kreditoriaus individualų pasiūlymą.</p>',
+    body: '<h2>Partnerių nuorodos</h2><p>Svetainė gali gauti komisinius, kai lankytojas per partnerio nuorodą kreipiasi į kreditorių. Tokios nuorodos žymimos sponsored. Konkrečios sutartys ir partnerių sąrašas: PATIKRINTI su svetainės savininku.</p><h2>Palyginimo tvarka</h2><p>Numatytoji tvarka — pagal pavadinimą. Galite rūšiuoti pagal pavadinimą arba didžiausią paskolos sumą. Teikėjų pavyzdžiai skiriasi suma ir terminu, todėl pagal jų kainą nereitinguojame. Balai be patikimo šaltinio nerodomi.</p><h2>Atsakomybė</h2><p>Palyginimas nėra individuali finansinė konsultacija. Mes nesuteikiame paskolų ir negarantuojame paraiškos patvirtinimo. Visada tikrinkite kreditoriaus individualų pasiūlymą.</p>',
   },
   'naudojimo-salygos': {
     title: 'Naudojimo sąlygos',

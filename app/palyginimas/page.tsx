@@ -17,7 +17,7 @@ export default async function Page({
   const creditors = await db.creditor.findMany({ orderBy: { name: 'asc' } });
   const amount = Math.max(50, Math.min(1000000, Number(p.suma) || 3000));
   const months = Math.max(1, Math.min(360, Math.round(Number(p.terminas) || 24)));
-  const verified = creditors.filter((c) => c.verifiedAt);
+
   return (
     <div className="wrap">
       <div className="page-hero">
@@ -33,15 +33,10 @@ export default async function Page({
         </p>
       </div>
       <div className="notice">
-        <strong>Duomenys atnaujinti:</strong>{' '}
-        {verified.length
-          ? new Date(Math.max(...verified.map((c) => c.verifiedAt!.getTime()))).toLocaleDateString(
-              'lt-LT',
-            )
-          : 'PATIKRINTI'}
-        . Seno turinio perkėlimo data: 2026-10-21. Perkėlimas nėra sąlygų patvirtinimas. Patvirtintą
-        kainodarą turi {creditors.filter((c) => c.pricingVerified && c.verifiedAt).length} iš{' '}
-        {creditors.length} kreditorių.
+        Sąlygos pagal svetainės valdytojo pateiktą 2026-10-22 suvestinę ir joje nurodytus teikėjų
+        šaltinius. Pavyzdžiai skiriasi suma ir terminu; jų negalima tiesiogiai rikiuoti pagal kainą.
+        Individuali kaina nustatoma po mokumo vertinimo. Pavyzdžių palūkanos netaikomos visoms
+        pasirinktoms sumoms.
       </div>
       <Comparison creditors={creditors} initialAmount={amount} initialMonths={months} />
       <p className="warning-text" style={{ marginTop: 30 }}>
